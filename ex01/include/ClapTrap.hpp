@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:54:18 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/30 16:13:52 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:27:52 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class ClapTrap
 {
-  private:
+  protected:
   
     std::string _name;
     int _hitPoints;
@@ -28,6 +28,7 @@ class ClapTrap
     
   public:
 
+    ClapTrap( void );
     ClapTrap(const std::string& name);
     ClapTrap(const ClapTrap& src);
     ~ClapTrap();

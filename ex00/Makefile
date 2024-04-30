@@ -1,5 +1,6 @@
 CXX				:= c++
-CXXFLAGS	:= -Iinclude -Wall -Wextra -Werror -std=c++98
+HEADERS		:= -Iinclude -Icolor
+CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98
 TARGET		:= clapTrap
 
 SRC_PATH	:= src
@@ -18,7 +19,7 @@ $(TARGET):	$(OBJ)
 
 $(OBJ_PATH)/%.o:	$(SRC_PATH)/%.cpp
 	mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) $(HEADERS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ_PATH)

@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:46:30 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/30 17:36:05 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 08:38:09 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ ScavTrap::ScavTrap( void ) : ClapTrap()
   std::cout << KGRN << "ScavTrap named " << BOLD_A << _name << RST;
   std::cout << KGRN << " was born." << RST << "\n";
   
-  _hitPoints = 100;
-  _energyPoints = 50;
-  _attackDamage = 20;
+  setStats(100, 50, 20);
 
   return ;
 }
@@ -29,9 +27,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
   std::cout << KGRN << "ScavTrap named " << BOLD_A << _name << RST;
   std::cout << KGRN << " was born." << RST << "\n";
   
-  _hitPoints = 100;
-  _energyPoints = 50;
-  _attackDamage = 20;
+  setStats(100, 50, 20);
 
   return ;
 }
@@ -73,4 +69,13 @@ void  ScavTrap::setName(std::string name)
   _name = name;
 
   return ;
+}
+
+void  ScavTrap::setStats(int HP, int EP, int AD)
+{
+  _hitPoints = HP;
+  _energyPoints = EP;
+  _attackDamage = AD;
+
+  return;
 }

@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:44:28 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/30 17:31:25 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 08:53:48 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ class ScavTrap : public ClapTrap
     ScavTrap& operator=(const ScavTrap& src);
 
     void  setName(std::string name);
-  
+    void  setStats(int HP, int EP, int AD);
+
+    void  attack(const std::string& target);
+    void  guardGate( void );
 };
 
 #endif

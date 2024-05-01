@@ -6,13 +6,13 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:11:33 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/30 16:39:16 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 08:41:23 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-static void  print_incapacity(std::string name, std::string action, std::string reason)
+void  ClapTrap::print_incapacity(std::string name, std::string action, std::string reason)
 {
   std::cout << KRED << BOLD_A << name << RST;
   std::cout << KRED << " could not " << action;
@@ -21,7 +21,7 @@ static void  print_incapacity(std::string name, std::string action, std::string 
   return ;
 }
 
-static bool  cantPerform(std::string name, std::string action, int energyPoints, int hitPoints)
+bool  ClapTrap::cantPerform(std::string name, std::string action, int energyPoints, int hitPoints)
 {
   if (energyPoints < 1) {
     print_incapacity(name, action, "energy");

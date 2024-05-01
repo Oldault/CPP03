@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:54:18 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/30 17:31:44 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 08:34:18 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ class ClapTrap
     void  attack(const std::string& target);
     void  takeDamage(unsigned int amount);
     void  beRepaired(unsigned int amount);
-
 };
 
 #endif

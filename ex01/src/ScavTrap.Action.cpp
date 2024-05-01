@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 08:42:51 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 09:02:17 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 09:26:25 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ void  ScavTrap::attack(const std::string& target)
 
 void  ScavTrap::guardGate()
 {
-  if (cantPerform(_name, "guard the gate", _energyPoints, _hitPoints)) {
+  if (cantPerform(_name, "guard the gate", 42, _hitPoints)) {
     return ;
   }
   std::cout << "[ ⚙️  ] ";
   std::cout << KCYN << BOLD_A << _name << RST;
-  std::cout << KCYN << " stand tall before the gate 🛡️." << RST << "\n";
+  std::cout << KCYN << " stands tall before the gate 🛡️." << RST << "\n";
 
   return ;
 }

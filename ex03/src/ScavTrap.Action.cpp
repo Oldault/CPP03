@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 08:42:51 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 09:26:08 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:55:41 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void  ScavTrap::attack(const std::string& target)
   std::cout << "[ ⚙️  ] ";
   std::cout << KMAG << BOLD_A << _name << RST;
   std::cout << KMAG << " strikes " << BOLD_A << target << RST;
-  std::cout << KMAG << " with genuine demeanour, dealing  " << BOLD_A << _attackDamage << RST;
+  std::cout << KMAG << " with genuine demeanour, dealing " << BOLD_A << _attackDamage << RST;
   std::cout << KMAG << " points of damage." << RST << "\n";
 
   return ;

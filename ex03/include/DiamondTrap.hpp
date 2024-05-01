@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 09:43:28 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 13:27:01 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:57:52 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class DiamondTrap : public ScavTrap, public FragTrap
     ~DiamondTrap();
 
     DiamondTrap& operator=(const DiamondTrap& src);
+
+    void  setName(std::string name);
 
     void  attack(const std::string& target);
     void  whoAmI( void );

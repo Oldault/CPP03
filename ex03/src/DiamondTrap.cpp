@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 09:13:30 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 13:41:50 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:01:13 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ DiamondTrap::DiamondTrap(const std::string& name) :
   return ;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& src)
+DiamondTrap::DiamondTrap(const DiamondTrap& src) :
+  ClapTrap(src),
+  ScavTrap(src),
+  FragTrap(src)
 {
   *this = src;
   std::cout << "[ 💎 ] ";
@@ -68,4 +71,16 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& src)
   }
 
   return *this;
+}
+
+void  DiamondTrap::setName(std::string name)
+{
+  DiamondTrap::_name = name;
+  ClapTrap::setName(name + "_clap_name");
+
+  std::cout << "[ 💎 ] ";
+  std::cout << KGRN << BOLD_A << _name << RST;
+  std::cout << KGRN << " was renamed to " << BOLD_A << name << RST << "\n";
+
+  return ;
 }

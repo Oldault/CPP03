@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:53:56 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 13:49:34 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:00:28 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ int main()
   std::cout << "\t[ 💎 ]:\t" << BOLD("DiamondTrap\n\n");
 
   /* functionalities Test */
+  std::cout << BOLD("Start of the tests: \n");
   {
-    std::cout << BOLD("Start of the tests: \n");
     DiamondTrap dt;
     dt.attack("Target1");
     dt.setName("DT-1");
+    dt.whoAmI();
 
     DiamondTrap dt2("DT-2");
     dt2.attack("Target2");
-    dt2.whoAmI();
     dt2.takeDamage(15);
     dt2.beRepaired(10);
 

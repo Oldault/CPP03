@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.Setters.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 16:44:28 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 09:06:51 by svolodin         ###   ########.fr       */
+/*   Created: 2024/05/01 09:08:04 by svolodin          #+#    #+#             */
+/*   Updated: 2024/05/01 09:08:27 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _SCAVTRAP_HPP_
-# define _SCAVTRAP_HPP_
-
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
-{  
-  public:
+void  ClapTrap::setName(std::string name)
+{
+  std::cout << "[ 🤖 ] ";
+  std::cout << KGRN << BOLD_A << _name << RST;
+  std::cout << KGRN << " was renamed to " << BOLD_A << name << RST << "\n";
 
-    ScavTrap( void );
-    ScavTrap(const std::string& name);
-    ScavTrap(const ScavTrap& src);
-    ~ScavTrap();
+  _name = name;
 
-    ScavTrap& operator=(const ScavTrap& src);
+  return ;
+}
 
-    void  attack(const std::string& target);
-    void  guardGate( void );
-};
+void  ClapTrap::setStats(int HP, int EP, int AD)
+{
+  _hitPoints = HP;
+  _energyPoints = EP;
+  _attackDamage = AD;
 
-#endif
+  return;
+}

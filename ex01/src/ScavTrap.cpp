@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:46:30 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 08:38:09 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 09:06:27 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 ScavTrap::ScavTrap( void ) : ClapTrap()
 {
+  std::cout << "[ ⚙️  ] ";
   std::cout << KGRN << "ScavTrap named " << BOLD_A << _name << RST;
   std::cout << KGRN << " was born." << RST << "\n";
   
@@ -24,6 +25,7 @@ ScavTrap::ScavTrap( void ) : ClapTrap()
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 {
+  std::cout << "[ ⚙️  ] ";
   std::cout << KGRN << "ScavTrap named " << BOLD_A << _name << RST;
   std::cout << KGRN << " was born." << RST << "\n";
   
@@ -34,6 +36,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 
 ScavTrap::ScavTrap(const ScavTrap& src)
 {
+  std::cout << "[ ⚙️  ] ";
   std::cout << KGRN << "ScavTrap copy constructor was called on " << BOLD_A << src._name << RST << "\n";
   *this = src;
 
@@ -42,6 +45,7 @@ ScavTrap::ScavTrap(const ScavTrap& src)
 
 ScavTrap::~ScavTrap()
 {
+  std::cout << "[ ⚙️  ] ";
   std::cout << KRED << "ScavTrap named " << BOLD_A << _name << RST;
   std::cout << KRED << " was destroyed." << RST << "\n";
 
@@ -50,6 +54,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& src)
 {
+  std::cout << "[ ⚙️  ] ";
   std::cout << KGRN << "ScavTrap copy assignment constructor was called on " << BOLD_A << src._name << RST << "\n";
   if (this != &src) {
     _name = src._name;
@@ -61,21 +66,3 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& src)
   return *this;
 }
 
-void  ScavTrap::setName(std::string name)
-{
-  std::cout << KGRN << BOLD_A << _name << RST;
-  std::cout << KGRN << " was renamed to " << BOLD_A << name << RST << "\n";
-
-  _name = name;
-
-  return ;
-}
-
-void  ScavTrap::setStats(int HP, int EP, int AD)
-{
-  _hitPoints = HP;
-  _energyPoints = EP;
-  _attackDamage = AD;
-
-  return;
-}

@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:11:33 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 08:41:23 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 09:00:55 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void  ClapTrap::print_incapacity(std::string name, std::string action, std::string reason)
 {
+  std::cout << "[ 🤖 ] ";
   std::cout << KRED << BOLD_A << name << RST;
   std::cout << KRED << " could not " << action;
   std::cout << " as he has no " << reason << " left." << RST << "\n";
@@ -40,6 +41,7 @@ void  ClapTrap::attack(const std::string& target)
     return ;
   }
   _energyPoints -= 1;
+  std::cout << "[ 🤖 ] ";
   std::cout << KMAG << BOLD_A << _name << RST;
   std::cout << KMAG << " attacks " << BOLD_A << target << RST;
   std::cout << KMAG << ", causing  " << BOLD_A << _attackDamage << RST;
@@ -54,6 +56,7 @@ void  ClapTrap::takeDamage(unsigned int amount)
     return ;
   }
   _hitPoints -= amount;
+  std::cout << "[ 🤖 ] ";
   std::cout << KYEL << BOLD_A << _name << RST;
   std::cout << KYEL << " loses " << BOLD_A << amount << RST;
   std::cout << KYEL << " health points. He is now at " << BOLD_A << _hitPoints << RST;
@@ -69,6 +72,7 @@ void  ClapTrap::beRepaired(unsigned int amount)
   }
   _energyPoints -= 1;
   _hitPoints += amount;
+  std::cout << "[ 🤖 ] ";
   std::cout << KBLU << BOLD_A << _name << RST;
   std::cout << KBLU << " restores " << BOLD_A << amount << RST;
   std::cout << KBLU << " health points. He is now at " << BOLD_A << _hitPoints << RST;

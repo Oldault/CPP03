@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:54:18 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 08:41:13 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 09:07:54 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ class ClapTrap
 
     ClapTrap& operator=(const ClapTrap& src);
 
+    /* Setters (inside `ClapTrap.Setters.cpp) */
     void  setName(std::string name);
+    void  setStats(int HP, int EP, int AD);
 
     /* Actions (inside `ClapTrap.Action.cpp`) */
     void  attack(const std::string& target);

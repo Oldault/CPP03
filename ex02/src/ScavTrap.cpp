@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:46:30 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 09:06:27 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 09:35:55 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ScavTrap::ScavTrap( void ) : ClapTrap()
 {
   std::cout << "[ ⚙️  ] ";
   std::cout << KGRN << "ScavTrap named " << BOLD_A << _name << RST;
-  std::cout << KGRN << " was born." << RST << "\n";
+  std::cout << KGRN << " was constructed." << RST << "\n";
   
   setStats(100, 50, 20);
 
@@ -27,7 +27,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 {
   std::cout << "[ ⚙️  ] ";
   std::cout << KGRN << "ScavTrap named " << BOLD_A << _name << RST;
-  std::cout << KGRN << " was born." << RST << "\n";
+  std::cout << KGRN << " was constructed." << RST << "\n";
   
   setStats(100, 50, 20);
 
@@ -47,7 +47,7 @@ ScavTrap::~ScavTrap()
 {
   std::cout << "[ ⚙️  ] ";
   std::cout << KRED << "ScavTrap named " << BOLD_A << _name << RST;
-  std::cout << KRED << " was destroyed." << RST << "\n";
+  std::cout << KRED << " was annihilated" << RST << "\n";
 
   return ;
 }

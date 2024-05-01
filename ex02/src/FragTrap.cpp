@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 09:13:30 by svolodin          #+#    #+#             */
-/*   Updated: 2024/05/01 09:29:37 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/05/01 09:36:39 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ FragTrap::FragTrap( void ) : ClapTrap()
 {
   std::cout << "[ 👾 ] ";
   std::cout << KGRN << "FragTrap named " << BOLD_A << _name << RST;
-  std::cout << KGRN << " was born." << RST << "\n";
+  std::cout << KGRN << " just showed up." << RST << "\n";
   
   setStats(100, 100, 30);
 
@@ -27,7 +27,7 @@ FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
   std::cout << "[ 👾 ] ";
   std::cout << KGRN << "FragTrap named " << BOLD_A << _name << RST;
-  std::cout << KGRN << " was born." << RST << "\n";
+  std::cout << KGRN << " just showed up." << RST << "\n";
   
   setStats(100, 100, 30);
 
@@ -47,7 +47,7 @@ FragTrap::~FragTrap()
 {
   std::cout << "[ 👾 ] ";
   std::cout << KRED << "FragTrap named " << BOLD_A << _name << RST;
-  std::cout << KRED << " was destroyed." << RST << "\n";
+  std::cout << KRED << " was obliterated." << RST << "\n";
 
   return ;
 }
